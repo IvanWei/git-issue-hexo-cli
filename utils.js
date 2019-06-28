@@ -62,5 +62,21 @@ exports.namedFile = ({title, number, created_at}) => {
   return `${year}${month}${date}_${hour}${minute}${second}_${number}_${title}`;
 };
 
+exports.formatPostDate = (sourceDate) => {
+  function padZero(value, length, content = '0') {
+    return value.toString().padStart(2, '0');
+  };
+
+  const newDate = new Date(sourceDate);
+  const year = newDate.getFullYear();
+  const month = padZero(newDate.getMonth() + 1, 2);
+  const date = padZero(newDate.getDate(), 2);
+  const hour = padZero(newDate.getHours(), 2);
+  const minute = padZero(newDate.getMinutes(), 2);
+  const second = padZero((newDate.getSeconds()), 2);
+
+  return `${year}-${month}-${date} ${hour}:${minute}:${second}`;
+}
+
 // ↓ 找字串中少 alt 和 src
 // src=\"[a-zA-Z0-9:\/\-\.]+"|alt=\"[\W0-9]+\"
