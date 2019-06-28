@@ -6,9 +6,9 @@ Get content by issue on Git service, then transfer to Markdown file.
 
 ### Support
 
-[x] Github
-[ ] Bitbucket
-[ ] GitLab
+- [x] Github
+- [ ] Bitbucket
+- [ ] GitLab
 
 ## Install
 
@@ -30,5 +30,7 @@ Get content by issue on Git service, then transfer to Markdown file.
 | -u, --username \<username\> | ✔ | | Username or user's id on git service |
 | -R, --repository <repository> | ✔ | | Repository's name |
 | -l, --label <label> | | | |
-| -o, --output <output> | | | 輸出時的資料夾 |
+| -o, --output <output> | ./ | | 輸出時的資料夾 |
 | --git-token <gitToken> | ✔ | | Git service's token |
+
+**Option "-G" is finish yet.**
