@@ -2,7 +2,7 @@
   "name": "@ivanwei/blog-content-source-cli",
   "version": "0.0.1",
   "description": "Blog's contents",
-  "main": "index.js",
+  "private": false,
   "bin": {
     "b.content": "./lib/index.js"
   },
