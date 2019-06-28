@@ -1,0 +1,31 @@
+{
+  "name": "@ivanwei/blog-content-source-cli",
+  "version": "0.0.1",
+  "description": "Blog's contents",
+  "main": "index.js",
+  "bin": {
+    "b.content": "./lib/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IvanWei/blog-content-source-cli.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Ivan Wei <scorpionseed@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IvanWei/blog-content-source-cli/issues"
+  },
+  "homepage": "https://github.com/IvanWei/blog-content-source-cli#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "mkdirp": "^0.5.1",
+    "node-fetch": "^2.6.0"
+  }
+}
