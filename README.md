@@ -22,14 +22,14 @@ Get content by issue on Git service, then transfer to Markdown file.
 
 ### Refresh contents
 
-> $ b.content refresh <options>
+> $ git-issue-hexo-cli refresh <options>
 
 | Option | Required | Default | Description |
 |---|---|---|---|
-| -G, --git-service \<gitService\> | | github | Choose git service |
+| -git, --git-service \<gitService\> | | github | Choose git service |
 | -u, --username \<username\> | ✔ | | Username or user's id on git service |
-| -R, --repository <repository> | ✔ | | Repository's name |
-| -l, --label <label> | | | |
+| -rep, --repository <repository> | ✔ | | Repository's name |
+| --label <label> | | | |
 | -o, --output <output> | ./ | | 輸出時的資料夾 |
 | --git-token <gitToken> | ✔ | | Git service's token |
 
