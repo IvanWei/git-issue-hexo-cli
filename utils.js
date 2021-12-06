@@ -57,7 +57,7 @@ export const namedFile = ({title, number, created_at}) => {
   const minute = padZero(createdAt.getMinutes(), 2);
   const second = padZero((createdAt.getSeconds()), 2);
 
-  return `${year}${month}${date}_${hour}${minute}${second}_${number}_${title}`;
+  return `${year}-${month}-${date}-${number}-${title}`;
 };
 
 export const formatPostDate = (sourceDate) => {
