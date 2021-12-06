@@ -1,24 +1,22 @@
-const fs =require('fs');
-const util =require('util');
-const chalk = require('chalk');
-const mkdirp = require('mkdirp');
+import {
+  writeFile,
+  unlink as removeFile,
+  access as accessFile,
+  mkdir
+} from 'fs/promises';
+import util from 'util';
+import chalk from 'chalk';
 
-const writeFile = util.promisify(fs.writeFile);
-const removeFile = util.promisify(fs.unlink);
-const accessFile = util.promisify(fs.access);
-const mkdirpPromise = util.promisify(mkdirp);
-
-exports.writeFile = async (title, content, outputPath) => {
+export const writeMarkdownFile = async (title, content, outputPath) => {
   try {
     const isExistPath = await accessFile(outputPath)
       .then(() => (true)).catch(() => (false));
 
     if (!isExistPath) {
-      await mkdirpPromise(outputPath);
+      await mkdir(outputPath, {recursive: true});
       console.log(chalk.yellow('Directory was created.'));
       console.log();
     }
-    console.log("v;: ", `${outputPath}${title}.md`)
 
     await writeFile(`${outputPath}/${title}.md`, content);
 
@@ -29,7 +27,7 @@ exports.writeFile = async (title, content, outputPath) => {
   }
 };
 
-exports.removeFile = async (title, outputPath) => {
+export const removeMarkdownFile = async (title, outputPath) => {
   try {
     const fullPathFile = `${outputPath}/${title}.md`;
     const isExistFile = await accessFile(fullPathFile)
@@ -46,7 +44,7 @@ exports.removeFile = async (title, outputPath) => {
   }
 };
 
-exports.namedFile = ({title, number, created_at}) => {
+export const namedFile = ({title, number, created_at}) => {
   function padZero(value, length, content = '0') {
     return value.toString().padStart(2, '0');
   };
@@ -62,7 +60,7 @@ exports.namedFile = ({title, number, created_at}) => {
   return `${year}${month}${date}_${hour}${minute}${second}_${number}_${title}`;
 };
 
-exports.formatPostDate = (sourceDate) => {
+export const formatPostDate = (sourceDate) => {
   function padZero(value, length, content = '0') {
     return value.toString().padStart(2, '0');
   };
