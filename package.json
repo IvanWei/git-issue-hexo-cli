@@ -1,31 +1,36 @@
 {
-  "name": "@ivanwei/blog-content-source-cli",
-  "version": "0.0.1",
+  "name": "@ivanwei/git-issue-hexo-cli",
+  "version": "0.0.2",
   "description": "Blog's contents",
   "private": false,
+  "type": "module",
   "bin": {
-    "b.content": "./lib/index.js"
+    "git-issue-hexo-cli": "./lib/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/IvanWei/blog-content-source-cli.git"
+    "url": "git+ssh://git@github.com/IvanWei/git-issue-hexo-cli.git"
   },
   "keywords": [
     "blog"
   ],
-  "author": "Ivan Wei <scorpionseed@gmail.com>",
+  "author": "Wei Hong-Lin <contact@ivanwei.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IvanWei/blog-content-source-cli/issues"
+    "url": "https://github.com/IvanWei/git-issue-hexo-cli/issues"
   },
-  "homepage": "https://github.com/IvanWei/blog-content-source-cli#readme",
+  "homepage": "https://github.com/IvanWei/git-issue-hexo-cli#readme",
   "dependencies": {
-    "chalk": "^2.4.2",
-    "commander": "^2.20.0",
-    "mkdirp": "^0.5.1",
-    "node-fetch": "^2.6.0"
+    "chalk": "^5.0.0",
+    "commander": "^8.3.0",
+    "mkdirp": "^1.0.4",
+    "node-fetch": "^3.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0"
   }
 }
