@@ -12,13 +12,13 @@ Get content by issue on Git service, then transfer to Markdown file.
 
 ## Install
 
-> $ yarn add @ivanwei/blog-content-source-cli
+> $ yarn add git-issue-hexo-cli
 
 ## How do use
 
 ### Get current version
 
-> $ b.content --version
+> $ git-issue-hexo-cli --version
 
 ### Refresh contents
 
@@ -33,4 +33,4 @@ Get content by issue on Git service, then transfer to Markdown file.
 | -o, --output <output> | ./ | | 輸出時的資料夾 |
 | --git-token <gitToken> | ✔ | | Git service's token |
 
-**Option "-G" is finish yet.**
+**Option "-git" is finish yet.**
