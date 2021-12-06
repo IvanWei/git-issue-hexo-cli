@@ -12,17 +12,17 @@ Get content by issue on Git service, then transfer to Markdown file.
 
 ## Install
 
-> $ yarn add git-issue-hexo-cli
+> $ yarn add @ivanwei/git-issue-hexo-cli
 
 ## How do use
 
 ### Get current version
 
-> $ git-issue-hexo-cli --version
+> $ @ivanwei/git-issue-hexo-cli --version
 
 ### Refresh contents
 
-> $ git-issue-hexo-cli refresh <options>
+> $ @ivanwei/git-issue-hexo-cli refresh <options>
 
 | Option | Required | Default | Description |
 |---|---|---|---|
