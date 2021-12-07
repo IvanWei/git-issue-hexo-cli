@@ -1,0 +1,13 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base"
+  ],
+  "rules": {
+    "import/no-unresolved": "off"
+  }
+}
